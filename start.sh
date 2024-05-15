@@ -39,5 +39,5 @@ if [ -n "$DW_STANDALONE" ]; then
     exit 4
   fi
 else
-  rtl_fm -f $FREQUENCY | direwolf $DWARGS -c direwolf.conf
+  rtl_fm -f $FREQUENCY -d $DEVICEID | direwolf $DWARGS -c direwolf.conf
 fi
