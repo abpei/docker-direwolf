@@ -38,6 +38,7 @@ ENV IGSERVER "noam.aprs2.net"
 ENV FREQUENCY "144.39M"
 ENV COMMENT "Direwolf in Docker w2bro/direwolf"
 ENV SYMBOL "igate"
+ENV DEVICEID "0"
 
 RUN mkdir -p /etc/direwolf
 RUN mkdir -p /var/log/direwolf
