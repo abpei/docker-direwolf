@@ -20,7 +20,9 @@ helm install w2bro/direwolf
 | `LATITUDE`  | Yes | Latitude for PBEACON, example `42^37.14N` |
 | `LONGITUDE` | Yes | Longitude for PBEACON, example `071^20.83W` |
 | `COMMENT`   | No  | Override PBEACON default comment, do not use the `~` character |
+| `HEIGHT`    | No  | Antenna height above ground level, defaults to 0 |
 | `SYMBOL`    | No  | APRS symbol for PBEACON, defaults to `igate` |
+| `OVERLAY`   | No  | APRS overlay for PBEACON, defaults to `I` |
 | `IGSERVER`  | No  | Override with the APRS server for your region, default for North America `noam.aprs2.net` |
 | `ADEVICE`   | No  | Override Direwolf's ADEVICE for digipeater, default is `stdin null` for receive-only igate |
 | `FREQUENCY` | No  | Override `rtl_fm` input frequency, default `144.39M` North America APRS |
