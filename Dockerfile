@@ -36,18 +36,19 @@ ENV CALLSIGN "N0CALL"
 ENV PASSCODE "-1"
 ENV IGSERVER "noam.aprs2.net"
 ENV FREQUENCY "144.39M"
-ENV COMMENT "Direwolf in Docker w2bro/direwolf"
-ENV SYMBOL "igate"
+ENV COMMENT "Direwolf in Docker"
+ENV SYMBOL "R&"
+ENV OVERLAY "I"
+ENV HEIGHT "0"
 ENV DEVICEID "0"
 
 RUN mkdir -p /etc/direwolf
 RUN mkdir -p /var/log/direwolf
-RUN addgroup -gid 242 direwolf && adduser -q -uid 242 -gid 242 --no-create-home --disabled-login --gecos "" direwolf 
 COPY start.sh direwolf.conf /etc/direwolf/
 RUN chown 242.242 -R /etc/direwolf
 RUN chown 242.242 -R /var/log/direwolf
 
-USER direwolf 
+USER root 
 WORKDIR /etc/direwolf
 
 CMD ["/bin/bash", "/etc/direwolf/start.sh"]
