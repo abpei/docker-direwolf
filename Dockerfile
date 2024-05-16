@@ -41,6 +41,7 @@ ENV SYMBOL "igate"
 ENV OVERLAY "I"
 ENV HEIGHT "0"
 ENV DEVICEID "0"
+ENV GAIN "25.4"
 
 RUN mkdir -p /etc/direwolf
 RUN mkdir -p /var/log/direwolf
