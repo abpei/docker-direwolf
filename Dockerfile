@@ -46,6 +46,7 @@ ENV GAIN "25.4"
 RUN mkdir -p /etc/direwolf
 RUN mkdir -p /var/log/direwolf
 COPY start.sh direwolf.conf /etc/direwolf/
+RUN addgroup -gid 242 direwolf && adduser -q -uid 242 -gid 242 --no-create-home --disabled-login --gecos "" direwolf 
 RUN chown 242.242 -R /etc/direwolf
 RUN chown 242.242 -R /var/log/direwolf
 

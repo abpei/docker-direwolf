@@ -20,6 +20,8 @@ helm install w2bro/direwolf
 | `LATITUDE`  | Yes | Latitude for PBEACON, example `42^37.14N` |
 | `LONGITUDE` | Yes | Longitude for PBEACON, example `071^20.83W` |
 | `COMMENT`   | No  | Override PBEACON default comment, do not use the `~` character |
+| `DEVICEID`  | No  | Specify Device ID in case multiple SDR dongles are present. Set ID via eeprom first. |
+| `GAIN`      | No  | Specify Device Gain manually, defaults to `25.4`. |
 | `HEIGHT`    | No  | Antenna height above ground level, defaults to 0 |
 | `SYMBOL`    | No  | APRS symbol for PBEACON, defaults to `igate` |
 | `OVERLAY`   | No  | APRS overlay for PBEACON, defaults to `I` |
@@ -28,6 +30,7 @@ helm install w2bro/direwolf
 | `FREQUENCY` | No  | Override `rtl_fm` input frequency, default `144.39M` North America APRS |
 | `DW_STANDALONE` | No | Set to any value to disable rtl_fm, useful in digipeater applications. Must also set `ADEVICE` |
 | `DWARGS` | No | Set to add/pass any arguments to the direwolf executable, example `-t 0` for no color logs |
+
 
 ## Example Usage
 
