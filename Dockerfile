@@ -50,7 +50,7 @@ RUN addgroup -gid 242 direwolf && adduser -q -uid 242 -gid 242 --no-create-home 
 RUN chown 242.242 -R /etc/direwolf
 RUN chown 242.242 -R /var/log/direwolf
 
-USER root 
+USER direwolf
 WORKDIR /etc/direwolf
 
 CMD ["/bin/bash", "/etc/direwolf/start.sh"]
